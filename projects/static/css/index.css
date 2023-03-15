@@ -115,9 +115,9 @@ body {
 }
 
 .results-carousel .item {
-  margin: 5px;
+  margin: 10px;
   overflow: hidden;
-  padding: 20px;
+  padding: 70px;
   font-size: 0;
 }
 
