@@ -36,9 +36,7 @@
                     <img src="./static/images/bunny_image.png" style="vertical-align: sub;" width="120">
                     Bunny-VisionPro
                 </h1>
-                <h2 style="text-align: center; color: #e47303;; font-size:30px; margin-top:-10px">Bimanual
-                    Dexterous Teleoperation with Real-Time
-                    Retargeting using VisionPro</h2>
+                <h2 style="text-align: center; color: #e47303;; font-size:30px; margin-top:-10px">Real-Time Bimanual Dexterous Teleoperation for Imitation Learning</h2>
 
                 <div class="box alt" style="margin-bottom: 0em;margin-left:20px;">
                     <div class="row 50% uniform" style="width: 100%;">
@@ -113,7 +111,17 @@
 
                 <div class="column has-text-centered" style="margin-top:20px;">
                     <div class="publication-links">
-                        <!-- Arxiv PDF link -->
+                        <!-- documentation PDF link -->
+                        <span class="link-block">
+                            <a href="" target="_blank" class="external-link button is-normal is-rounded is-dark" style="margin-right:40px;line-height:35px">
+                                <span class="icon">
+                                    <i class="ai ai-arxiv"></i>
+                                </span>
+                                <span >Arxiv</span>
+                            </a>
+                        </span>
+
+                        <!-- documentation PDF link -->
                         <span class="link-block">
                             <a href="https://dingry.github.io/BunnyVisionPro/" target="_blank" class="external-link button is-normal is-rounded is-dark" style="margin-right:40px;line-height:35px">
                                 <span class="icon">
@@ -134,7 +142,7 @@
                         <!-- </a> -->
                         <!-- </span> -->
 
-                        <!-- ArXiv abstract Link -->
+                        <!-- twitter Link -->
                         <span class="link-block">
                             <a href="https://twitter.com/xiaolonw/status/1787526016782770354" target="_blank" class="external-link button is-normal is-rounded is-dark" style="margin-right:40px;line-height:35px">
                                 <span class="icon">
@@ -160,12 +168,12 @@
 
                 <p style="text-align:left; margin-top:30px; margin-bottom: 20px">
                     <!-- <b style="font-weight:900;">Abstract.</b> -->
-                    <span style="font-size: 1.0em;">Bunny-VisionPro is a robot teleoperation system integrated with Apple Vision Pro as pose tracking device, specifically tailored for bimanual dexterous manipulation. The system boasts a highly modular architecture, simplifying deployment and enhancing flexibility. In this project, we demonstrate that our robust teleoperation system can perform various kinds of tasks such as skincare, kitchen tasks, dynamic tasks, and motion-constrained tasks. Such resilient and versatile teleoperation system can be deployed to collect high-quality data for imitation learning. We showcase the learned autonomous policy in a bimanual  dexterous setup across a range of household tasks.</span>
+                    <span style="font-size: 1.0em;">Teleoperation is a crucial tool for collecting human demonstrations, but controlling robots with bimanual dexterous hands remains a challenge. Existing teleoperation systems struggle to handle the complexity of coordinating two hands for intricate manipulations. We introduce Bunny-VisionPro, a real-time bimanual dexterous teleoperation system that leverages a VR headset. Unlike previous vision-based teleoperation systems, we design novel low-cost devices to provide haptic feedback to the operator, enhancing immersion. Our system prioritizes safety by incorporating collision and singularity avoidance while maintaining real-time performance through innovative designs. Bunny-VisionPro outperforms prior systems on a standard task suite, achieving higher success rates and reduced task completion times. Moreover, the high-quality teleoperation demonstrations improve downstream imitation learning performance, leading to better generalizability. Notably, Bunny-VisionPro enables imitation learning with challenging multi-stage, long-horizon dexterous manipulation tasks, which have rarely been addressed in previous work. Our system's ability to handle bimanual manipulations while prioritizing safety and real-time performance makes it a powerful tool for advancing dexterous manipulation and imitation learning.</span>
                 </p>
                 <div class="box alt" style="margin-bottom: 1em;">
 
                     <video autoplay controls muted loop style="width: 100%; margin-left: 0%;" preload="metadata">
-                        <source src="bunny_file/videos/teaser.mp4" type="video/mp4">
+                        <source src="bunny_file/videos/bunny.mp4" type="video/mp4">
                     </video>
 
                 </div>
@@ -180,9 +188,181 @@
 
                 </div>
 
+
                 <hr style="margin-top: 1em;">
-                <h2 style="text-align: left; margin-bottom:10px;">Autonomous Policy Rollouts</h2>
-                <p style="margin-bottom: 8px;">We train diffusion policy with demonstrations collected by BunnyVisionPro and roll out the policy autonomously.</p>
+                <h2 style="text-align: left; margin-bottom:20px;">Haptics User Study</h2>
+                <p style="margin-bottom: 8px; color: #e47303">Haptic feedback enhances teleoperation efficiency.</p>
+                <div class="row 50% uniform" style="width: 100%;">
+                    <div class="2u" style="font-size: 1.2em; line-height: 2em; text-align: center; width:50%;">
+                        w/o haptic feedback
+                        <span class="image fit" style="margin-bottom: 0em;">
+                            <video class="videostyle_with_border_success" autoplay="" loop="" muted="" playsinline=""
+                                style="width: 100%; margin-right: 0%;" preload="metadata">
+                                <source src="bunny_file/videos/haptics/handover_wo_haptics.mp4" type="video/mp4">
+                            </video>
+                        </span>
+                    </div>
+
+                    <div class="2u" style="font-size: 1.2em; line-height: 2em; text-align: center; width: 50%;">
+                        w/ haptic feedback
+                        <span class="image fit" style="margin-bottom: 0em;">
+                            <video class="videostyle_with_border_success" autoplay="" loop="" muted="" playsinline=""
+                                style="width: 100%; margin-left: 0%;" preload="metadata">
+                                <source src="bunny_file/videos/haptics/handover_w_haptics.mp4" type="video/mp4">
+                            </video>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="row 50% uniform" style="width: 100%;">
+                    <div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width:50%;">
+                        <span class="image fit" style="margin-bottom: 0em;">
+                            <video class="videostyle_with_border_success" autoplay="" loop="" muted="" playsinline=""
+                                style="width: 100%; margin-right: 0%;" preload="metadata">
+                                <source src="bunny_file/videos/haptics/ballmove_wo_haptics.mp4" type="video/mp4">
+                            </video>
+                        </span>
+                    </div>
+
+                    <div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 50%;">
+                        <span class="image fit" style="margin-bottom: 0em;">
+                            <video class="videostyle_with_border_success" autoplay="" loop="" muted="" playsinline=""
+                                style="width: 100%; margin-left: 0%;" preload="metadata">
+                                <source src="bunny_file/videos/haptics/ballmove_w_haptics.mp4" type="video/mp4">
+                            </video>
+                        </span>
+                    </div>
+                </div>
+
+                <hr style="margin-top: 1em;">
+                <h2 style="text-align: left; margin-bottom:10px;">Haptic Feedback Demo</h2>
+                <p style="margin-bottom: 8px; color: #e47303">Tactile signals from the Ability hand activate the haptic actuators, causing them to vibrate and provide touch feedback to the human operator.</p>
+                <div class="box alt" style="margin-bottom: 1em;margin-top: 1em;">
+                    <video autoplay controls muted loop style="width: 50%; margin-left: 25%;" preload="metadata">
+                        <source src="bunny_file/videos/motor_vibration_final.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <hr style="margin-top: 1em;">
+                <h2 style="text-align: left; margin-bottom:10px;">Imitation Learning Results with Generalization</h2>
+                <br>
+                <div class="row 50% uniform" style="width: 100%;">
+                    <div class="2u" style="font-size: 1.2em; line-height: 2em; text-align: center; width:66.66%;padding-right:0.3em">
+                        spatial generalization
+                        <span class="image fit" style="margin-bottom: 0em;">
+                            <video class="videostyle_with_border_success" autoplay="" loop="" muted="" playsinline=""
+                                style="width: 24%; margin-right: 0%;" preload="metadata">
+                                <source src="bunny_file/videos/il_gen/grasp_sg1.mp4" type="video/mp4">
+                            </video>
+                            <video class="videostyle_with_border_success" autoplay="" loop="" muted="" playsinline=""
+                                style="width: 24%; margin-right: 0%;" preload="metadata">
+                                <source src="bunny_file/videos/il_gen/grasp_sg2.mp4" type="video/mp4">
+                            </video>
+                            <video class="videostyle_with_border_success" autoplay="" loop="" muted="" playsinline=""
+                                style="width: 24%; margin-right: 0%;" preload="metadata">
+                                <source src="bunny_file/videos/il_gen/grasp_sg3.mp4" type="video/mp4">
+                            </video>
+                            <video class="videostyle_with_border_success" autoplay="" loop="" muted="" playsinline=""
+                                style="width: 24%; margin-right: 0%;" preload="metadata">
+                                <source src="bunny_file/videos/il_gen/grasp_sg4.mp4" type="video/mp4">
+                            </video>
+                        </span>
+                    </div>
+
+                    <div class="2u"
+                        style="font-size: 1.2em; line-height: 2em; text-align: center; width: 33.33%; border-left: 2px solid #ccc;padding-left:0.2em">
+                        unseen object
+                        <span class="image fit" style="margin-bottom: 0em;">
+                            <video class="videostyle_with_border_success" autoplay="" loop="" muted="" playsinline=""
+                                style="width: 48%; margin-left: 1%;" preload="metadata">
+                                <source src="bunny_file/videos/il_gen/grasp_u1.mp4" type="video/mp4">
+                            </video>
+                            <video class="videostyle_with_border_success" autoplay="" loop="" muted="" playsinline=""
+                                style="width: 48%; margin-right: 0%;" preload="metadata">
+                                <source src="bunny_file/videos/il_gen/grasp_u2.mp4" type="video/mp4">
+                            </video>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="row 50% uniform" style="width: 100%;">
+                    <div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width:66.66%;padding-right:0.3em">
+                        <span class="image fit" style="margin-bottom: 0em;">
+                            <video class="videostyle_with_border_success" autoplay="" loop="" muted="" playsinline=""
+                                style="width: 24%; margin-right: 0%;" preload="metadata">
+                                <source src="bunny_file/videos/il_gen/cleanpan_sg1.mp4" type="video/mp4">
+                            </video>
+                            <video class="videostyle_with_border_success" autoplay="" loop="" muted="" playsinline=""
+                                style="width: 24%; margin-right: 0%;" preload="metadata">
+                                <source src="bunny_file/videos/il_gen/cleanpan_sg2.mp4" type="video/mp4">
+                            </video>
+                            <video class="videostyle_with_border_success" autoplay="" loop="" muted="" playsinline=""
+                                style="width: 24%; margin-right: 0%;" preload="metadata">
+                                <source src="bunny_file/videos/il_gen/cleanpan_sg3.mp4" type="video/mp4">
+                            </video>
+                            <video class="videostyle_with_border_success" autoplay="" loop="" muted="" playsinline=""
+                                style="width: 24%; margin-right: 0%;" preload="metadata">
+                                <source src="bunny_file/videos/il_gen/cleanpan_sg4.mp4" type="video/mp4">
+                            </video>
+                        </span>
+                    </div>
+
+                    <div class="2u"
+                        style="font-size: 1em; line-height: 1.5em; text-align: center; width: 33.33%; border-left: 2px solid #ccc;padding-left:0.2em">
+                        <span class="image fit" style="margin-bottom: 0em;">
+                            <video class="videostyle_with_border_success" autoplay="" loop="" muted="" playsinline=""
+                                style="width: 48%; margin-left: 1%;" preload="metadata">
+                                <source src="bunny_file/videos/il_gen/cleanpan_u1.mp4" type="video/mp4">
+                            </video>
+                            <video class="videostyle_with_border_success" autoplay="" loop="" muted="" playsinline=""
+                                style="width: 48%; margin-right: 0%;" preload="metadata">
+                                <source src="bunny_file/videos/il_gen/cleanpan_u2.mp4" type="video/mp4">
+                            </video>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="row 50% uniform" style="width: 100%;">
+                    <div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width:66.66%;padding-right:0.3em">
+                        <span class="image fit" style="margin-bottom: 0em;">
+                            <video class="videostyle_with_border_success" autoplay="" loop="" muted="" playsinline=""
+                                style="width: 24%; margin-right: 0%;" preload="metadata">
+                                <source src="bunny_file/videos/il_gen/pour_sg1.mp4" type="video/mp4">
+                            </video>
+                            <video class="videostyle_with_border_success" autoplay="" loop="" muted="" playsinline=""
+                                style="width: 24%; margin-right: 0%;" preload="metadata">
+                                <source src="bunny_file/videos/il_gen/pour_sg2.mp4" type="video/mp4">
+                            </video>
+                            <video class="videostyle_with_border_success" autoplay="" loop="" muted="" playsinline=""
+                                style="width: 24%; margin-right: 0%;" preload="metadata">
+                                <source src="bunny_file/videos/il_gen/pour_sg3.mp4" type="video/mp4">
+                            </video>
+                            <video class="videostyle_with_border_success" autoplay="" loop="" muted="" playsinline=""
+                                style="width: 24%; margin-right: 0%;" preload="metadata">
+                                <source src="bunny_file/videos/il_gen/pour_sg4.mp4" type="video/mp4">
+                            </video>
+                        </span>
+                    </div>
+
+                    <div class="2u"
+                        style="font-size: 1em; line-height: 1.5em; text-align: center; width: 33.33%; border-left: 2px solid #ccc;padding-left:0.2em">
+                        <span class="image fit" style="margin-bottom: 0em;">
+                            <video class="videostyle_with_border_success" autoplay="" loop="" muted="" playsinline=""
+                                style="width: 48%; margin-left: 1%;" preload="metadata">
+                                <source src="bunny_file/videos/il_gen/pour_u1.mp4" type="video/mp4">
+                            </video>
+                            <video class="videostyle_with_border_success" autoplay="" loop="" muted="" playsinline=""
+                                style="width: 48%; margin-right: 0%;" preload="metadata">
+                                <source src="bunny_file/videos/il_gen/pour_u2.mp4" type="video/mp4">
+                            </video>
+                        </span>
+                    </div>
+                </div>
+
+
+                <hr style="margin-top: 1em;">
+                <h2 style="text-align: left; margin-bottom:10px;">Imitation Learning Results on Long-horizon Tasks</h2>
+                <!-- <p style="margin-bottom: 8px;">We train diffusion policy with demonstrations collected by BunnyVisionPro and roll out the policy autonomously.</p> -->
 
                 <div class="box alt" style="margin-bottom: 1em;">
                     <video autoplay controls muted loop style="width: 100%; margin-left: 0%;" preload="metadata">
@@ -191,7 +371,7 @@
                 </div>
 
                 <hr style="margin-top: 1em;">
-                <h2 style="text-align: left; margin-bottom:10px;">Teleoperation Tasks</h2>
+                <h2 style="text-align: left; margin-bottom:10px;">More Teleoperation Tasks</h2>
 
                 <h3 style="margin-top: 2%;margin-bottom: 1%;">Kitchen Tasks</h3>
                 <div class="box alt" style="margin-bottom: 1em;">
@@ -224,7 +404,7 @@
 
 <code>@article{bunny-visionpro,
     author  = {Runyu Ding, Yuzhe Qin, Jiyue Zhu, Chengzhe Jia, Shiqi Yang, Ruihan Yang, Xiaojuan Qi, and Xiaolong Wang},
-    title   = {Bunny-VisionPro: Bimanual Dexterous Teleoperation with Real-Time Retargeting using Vision Pro},
+    title   = {Bunny-VisionPro: Real-Time Bimanual Dexterous Teleoperation for Imitation Learning},
     year    = {2024}
   }
 </code>
