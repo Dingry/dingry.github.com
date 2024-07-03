@@ -164,7 +164,7 @@
 
                 <h1 style="text-align: center; margin-top:30px; margin-bottom: 10px; font-weight: 900; color:#4C4E4E">Abstract</h1>
                 <div class="row 50% uniform" style="width: 70%; margin-left: 15%;">
-                    <p style="text-align:left; margin-top:0px; margin-bottom: 20px; text-align: justify;">
+                    <p style="text-align:left; margin-top:10px; margin-bottom: 20px; text-align: justify;">
                         <span style="font-size: 1.2em; color:#4C4E4E;">Teleoperation is a crucial tool for collecting human demonstrations, but controlling robots with bimanual dexterous hands remains a challenge. We introduce Bunny-VisionPro, a real-time bimanual dexterous teleoperation system that leverages a VR headset. Unlike previous vision-based teleoperation systems, we design novel low-cost devices to provide haptic feedback to the operator, enhancing immersion. Our system prioritizes safety by incorporating collision and singularity avoidance while maintaining real-time performance through innovative designs. Bunny-VisionPro outperforms prior systems on a standard task suite, achieving higher success rates and reduced task completion times. Moreover, the high-quality teleoperation demonstrations improve downstream imitation learning performance, leading to better generalizability. Notably, Bunny-VisionPro enables imitation learning with challenging multi-stage, long-horizon dexterous manipulation tasks, which have rarely been addressed in previous work. Our system's ability to handle bimanual manipulations while prioritizing safety and real-time performance makes it a powerful tool for advancing dexterous manipulation and imitation learning.</span>
                     </p>
                 </div>
@@ -176,12 +176,18 @@
                     <video autoplay controls muted loop style="width: 100%; margin-left: 0%;" preload="metadata">
                         <source src="bunny_file/videos/skincare.mp4" type="video/mp4">
                     </video>
+                    <p style="text-align:left; margin-top:10px; margin-bottom: 20px; text-align: justify;">
+                        <span style="font-size: 1.2em; color:#4C4E4E;">Hand poses captured by Apple Vision Pro are converted into robot motion control commands for real-time teleoperation. We prioritize safety through singularity checks and collision avoidance, enabling the robot to perform human skincare tasks safely in teleoperation mode.</span>
+                </div>
 
+                <h2 style="text-align: center; margin-top: 1em; margin-bottom: 0.5em; font-weight: 900; color:#4C4E4E;">Teleoperation System</h2>
+                <div class="box alt" style="margin-bottom: 1em;margin-top: 1em;">
+                    <img style="width: 100%" src="bunny_file/img/teleop_system.png"></img>
                 </div>
 
                 <h1 style="text-align: left; margin-top: 2em; margin-bottom: 0em; font-weight: 900">Human Haptic Feedback</h1>
                 <hr style="margin-bottom: 2em; margin-top: 0.2em">
-                <p style="margin-bottom: 8px; font-size: 1.2em; font-weight: 100; color: #4C4E4E; line-height: 180%">
+                <p style="margin-bottom: 8px; font-size: 1.2em; font-weight: 100; color: #4C4E4E; line-height: 180%; text-align: justify;">
                     Effective human manipulation integrates visual and tactile feedback, but many vision-based teleoperation systems overlook haptic feedback. We developed a cost-effective haptic feedback system using ERM actuators to address this. It processes tactile signals from robot hands and drives vibration motors to simulate sensations, allowing operators to perceive and respond to the environment more intuitively, enhancing manipulation performance. 
                 </p>
  
@@ -242,12 +248,17 @@
 
                 <h1 style="text-align: left; margin-top: 2em; margin-bottom: 0em; font-weight: 900">Imitation Learning</h1>
                 <hr style="margin-bottom: 2em; margin-top: 0.2em">
+
+                <p style="margin-bottom: 8px; font-size: 1.2em; font-weight: 100; color: #4C4E4E; line-height: 180%; text-align: justify;">
+                    We evaluate the quality of demonstrations collected by our system by training popular imitation learning algorithms — ACT, Diffusion Policy, and DP3 — and testing their generalization performance in term of spatial generalization and unseen scenarios. Additionally, we train on challenging long-horizon tasks to showcase our system's effectiveness in collecting high-quality demonstrations. 
+                </p>
+
                 <h2 style="text-align: center; margin-top: 1em; margin-bottom: 0em; font-weight: 900; color:#4C4E4E;">Generalization Results</h2>
 
                 <h3 style="text-align: center; margin-top: 1em; margin-bottom: 1em; font-weight: 900; color:#4C4E4E;">Grasping toy</h3>
-                <p style="text-align: center; font-size: 1.2em; margin-bottom: 1em;">Spatial Generalization</p>
+                <p style="text-align: center; font-size: 1.2em; margin-bottom: 0.5em;">Spatial Generalization</p>
 
-                <div class="row 50% uniform" style="width: 100%;">
+                <div class="row 50% uniform" style="width: 100%; margin-top: 0.5em">
                     <div class="2u" style="font-size: 1.3em; line-height: 2em; text-align: center; width:50%;">
                         <span class="image fit" style="margin-bottom: 0em;">
                             <video class="videostyle_with_border_success" autoplay="" loop="" muted="" playsinline=""
@@ -287,9 +298,9 @@
                     </div>
                 </div>
 
-                <p style="text-align: center; font-size: 1.2em; margin-top: 1em; margin-bottom: 1em;">Unseen Object</p>
+                <p style="text-align: center; font-size: 1.2em; margin-top: 1em; margin-bottom: 0.5em;">Unseen Object</p>
 
-                <div class="row 50% uniform" style="width: 100%;">
+                <div class="row 50% uniform" style="width: 100%; margin-top: 0.5em">
                     <div class="2u" style="font-size: 1.3em; line-height: 2em; text-align: center; width:50%;">
                         <span class="image fit" style="margin-bottom: 0em;">
                             <video class="videostyle_with_border_success" autoplay="" loop="" muted="" playsinline=""
@@ -310,9 +321,9 @@
                 </div>
 
                 <h3 style="text-align: center; margin-top: 1em; margin-bottom: 1em; font-weight: 900; color:#4C4E4E;">Cleaning pan</h3>
-                <p style="text-align: center; font-size: 1.2em; margin-bottom: 1em;">Spatial Generalization</p>
+                <p style="text-align: center; font-size: 1.2em; margin-bottom: 0.5em;">Spatial Generalization</p>
 
-                <div class="row 50% uniform" style="width: 100%;">
+                <div class="row 50% uniform" style="width: 100%; margin-top: 0.5em">
                     <div class="2u" style="font-size: 1.3em; line-height: 2em; text-align: center; width:50%;">
                         <span class="image fit" style="margin-bottom: 0em;">
                             <video class="videostyle_with_border_success" autoplay="" loop="" muted="" playsinline=""
@@ -352,9 +363,9 @@
                     </div>
                 </div>
 
-                <p style="text-align: center; font-size: 1.2em; margin-top: 1em; margin-bottom: 1em;">Unseen Object</p>
+                <p style="text-align: center; font-size: 1.2em; margin-top: 1em; margin-bottom: 0.5em;">Unseen Object</p>
 
-                <div class="row 50% uniform" style="width: 100%;">
+                <div class="row 50% uniform" style="width: 100%; margin-top: 0.5em">
                     <div class="2u" style="font-size: 1.3em; line-height: 2em; text-align: center; width:50%;">
                         <span class="image fit" style="margin-bottom: 0em;">
                             <video class="videostyle_with_border_success" autoplay="" loop="" muted="" playsinline=""
@@ -375,9 +386,9 @@
                 </div>
 
                 <h3 style="text-align: center; margin-top: 1em; margin-bottom: 1em; font-weight: 900; color:#4C4E4E;">Uncovering & Pouring</h3>
-                <p style="text-align: center; font-size: 1.2em; margin-bottom: 1em;">Spatial Generalization</p>
+                <p style="text-align: center; font-size: 1.2em; margin-bottom: 0.5em;">Spatial Generalization</p>
 
-                <div class="row 50% uniform" style="width: 100%;">
+                <div class="row 50% uniform" style="width: 100%; margin-top: 0.5em;">
                     <div class="2u" style="font-size: 1.3em; line-height: 2em; text-align: center; width:50%;">
                         <span class="image fit" style="margin-bottom: 0em;">
                             <video class="videostyle_with_border_success" autoplay="" loop="" muted="" playsinline=""
@@ -417,9 +428,9 @@
                     </div>
                 </div>
 
-                <p style="text-align: center; font-size: 1.2em; margin-top: 1em; margin-bottom: 1em;">Unseen Object</p>
+                <p style="text-align: center; font-size: 1.2em; margin-top: 1em; margin-bottom: 0.5em;">Unseen Object</p>
 
-                <div class="row 50% uniform" style="width: 100%;">
+                <div class="row 50% uniform" style="width: 100%; margin-top: 0.5em;">
                     <div class="2u" style="font-size: 1.3em; line-height: 2em; text-align: center; width:50%;">
                         <span class="image fit" style="margin-bottom: 0em;">
                             <video class="videostyle_with_border_success" autoplay="" loop="" muted="" playsinline=""
