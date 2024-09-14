@@ -461,8 +461,135 @@
                     </div>
                 </div>
 
+                <h1 style="text-align: left; margin-top: 2em; margin-bottom: 0em; font-weight: 900">Safety and Real-time Performance</h1>
+                <hr style="margin-bottom: 2em; margin-top: 0.2em">
+
+                <h2 style="text-align: center; margin-bottom:10px;font-weight: 600;color:#4C4E4E;">Arm Motion Control: Bunny-VisionPro vs AnyTeleop+</a></h2>
+                
+                <div>From the video, <b style="color: blue;"">AnyTeleop+</b> shows strange behaviors such as <span style="color: blue;">excessive joint movement</span> in joint 2 and the arm lowering unexpectedly. It also suffers from <span style="color: blue;">unstable latency</span>, failing to track the target end-effector position (the transluscent ball) in real time. In contrast, <b style="color: green;">Bunny-VisionPro</b> produces <span style="color: green">more natural, stable and responsive trajectories</span>, not only enhancing teleoperation accuracy and efficiency, but also enabling high-quality data collection for effective imitation learning.</div>
+                
+                <br>
+                <div class="row 50% uniform" style="width: 100%;">
+                    <div class="2u" style="font-size: 1.3em; line-height: 2em; text-align: center; width:50%;">
+                        AnyTeleop+
+                        <span class="image fit" style="margin-bottom: 0em;">
+                            <video class="videostyle_with_border_success" autoplay="" loop="" muted="" playsinline=""
+                                style="width: 100%; margin-right: 0%;" preload="metadata">
+                                <source src="./bunny_file/rebuttal_videos/motion/anyteleop.mp4" type="video/mp4">
+                            </video>
+                        </span>
+                    </div>
+
+                    <div class="2u" style="font-size: 1.3em; line-height: 2em; text-align: center; width: 50%;">
+                        Bunny-VisionPro
+                        <span class="image fit" style="margin-bottom: 0em;">
+                            <video class="videostyle_with_border_success" autoplay="" loop="" muted="" playsinline=""
+                                style="width: 100%; margin-left: 0%;" preload="metadata">
+                                <source src="./bunny_file/rebuttal_videos/motion/bunny.mp4" type="video/mp4">
+                            </video>
+                        </span>
+                    </div>
+                </div>
+
+                <br>
+                <br>
+                <h2 style="text-align: center; margin-bottom:10px;font-weight: 600;color:#4C4E4E;">Collision Avoidance</a></h2>
+<br>
+            <div>
+                In our simulation, we use blue cubes to represent obstacles. The robot's goal is to move around without hitting these obstacles.
+                Without collision avoidance, the robot collides with them, shown as penetration in the simulation, which would be dangerous if deployed in real robots. With collision avoidance, the robot successfully bypasses the obstacles in real time, demonstrating the effectiveness of our collision avoidance system.
+            </div>
+
+                <div class="row 50% uniform" style="width: 100%;">
+                    <div class="2u" style="font-size: 1.3em; line-height: 2em; text-align: center; width:50%;">
+                        w/o collision avoidance
+                        <span class="image fit" style="margin-bottom: 0em;">
+                            <video class="videostyle_with_border_success" autoplay="" loop="" muted="" playsinline=""
+                                style="width: 100%; margin-right: 0%;" preload="metadata">
+                                <source src="./bunny_file/rebuttal_videos/collision/collision.mp4" type="video/mp4">
+                            </video>
+                        </span>
+                    </div>
+
+                    <div class="2u" style="font-size: 1.3em; line-height: 2em; text-align: center; width: 50%;">
+                        w/ collision avoidance
+                        <span class="image fit" style="margin-bottom: 0em;">
+                            <video class="videostyle_with_border_success" autoplay="" loop="" muted="" playsinline=""
+                                style="width: 100%; margin-left: 0%;" preload="metadata">
+                                <source src="./bunny_file/rebuttal_videos/collision/collision_free.mp4" type="video/mp4">
+                            </video>
+                        </span>
+                    </div>
+                </div>
+
+                <br>
+                <br>
+                <h2 style="text-align: center; margin-bottom:10px;font-weight: 600;color:#4C4E4E;">Comparing Wearable Devices for Hand Pose Tracking and Robot Retargeting</a></h2>
+                
+                <div class="box alt" style="margin-bottom: 1em;">
+                    <video autoplay controls muted loop style="width: 100%; margin-left: 0%;" preload="metadata">
+                        <source src="./bunny_file/rebuttal_videos/wearable_device/finger_move_wearable.mp4" type="video/mp4">
+
+                    </video>
+                </div>
+        
+
+                <br>
                 <h1 style="text-align: left; margin-top: 2em; margin-bottom: 0em; font-weight: 900">More Teleoperation Tasks</h1>
                 <hr style="margin-bottom: 2em; margin-top: 0.2em">
+
+                <h2 style="text-align: center; margin-bottom:10px;font-weight: 600;color:#4C4E4E;">Haptic Feedback Tasks</a></h2>
+
+                
+                <h3 style="text-align: center; margin-bottom:10px;color:#4C4E4E;">Opening Cabinet</h3>
+
+                <div class="row 50% uniform" style="width: 100%;">
+                    <div class="2u" style="font-size: 1.3em; line-height: 2em; text-align: center; width:50%;">
+                        w/o haptic feedback
+                        <span class="image fit" style="margin-bottom: 0em;">
+                            <video class="videostyle_with_border_success" autoplay="" loop="" muted="" playsinline=""
+                                style="width: 100%; margin-right: 0%;" preload="metadata">
+                                <source src="./bunny_file/rebuttal_videos/haptic_tasks/cabinet.mp4" type="video/mp4">
+                            </video>
+                        </span>
+                    </div>
+
+                    <div class="2u" style="font-size: 1.3em; line-height: 2em; text-align: center; width: 50%;">
+                        w/ haptic feedback
+                        <span class="image fit" style="margin-bottom: 0em;">
+                            <video class="videostyle_with_border_success" autoplay="" loop="" muted="" playsinline=""
+                                style="width: 100%; margin-left: 0%;" preload="metadata">
+                                <source src="./bunny_file/rebuttal_videos/haptic_tasks/cabinet_haptics.mp4" type="video/mp4">
+                            </video>
+                        </span>
+                    </div>
+                </div>
+
+
+                <h3 style="text-align: center; margin-bottom:10px;color:#4C4E4E;">Cleaning Whiteboard</h3>
+
+                <div class="row 50% uniform" style="width: 100%;">
+                    <div class="2u" style="font-size: 1.3em; line-height: 2em; text-align: center; width:50%;">
+                        w/o haptic feedback
+                        <span class="image fit" style="margin-bottom: 0em;">
+                            <video class="videostyle_with_border_success" autoplay="" loop="" muted="" playsinline=""
+                                style="width: 100%; margin-right: 0%;" preload="metadata">
+                                <source src="./bunny_file/rebuttal_videos/haptic_tasks/whiteboard.mp4" type="video/mp4">
+                            </video>
+                        </span>
+                    </div>
+
+                    <div class="2u" style="font-size: 1.3em; line-height: 2em; text-align: center; width: 50%;">
+                        w/ haptic feedback
+                        <span class="image fit" style="margin-bottom: 0em;">
+                            <video class="videostyle_with_border_success" autoplay="" loop="" muted="" playsinline=""
+                                style="width: 100%; margin-left: 0%;" preload="metadata">
+                                <source src="./bunny_file/rebuttal_videos/haptic_tasks/whiteboard_haptics.mp4" type="video/mp4">
+                            </video>
+                        </span>
+                    </div>
+                </div>
+
                 <h2 style="text-align: center; margin-top: 2em; margin-bottom: 1em; font-weight: 900; color:#4C4E4E;">Kitchen Tasks</h2>
                 <div class="box alt" style="margin-bottom: 1em;">
                     <video autoplay controls muted loop style="width: 100%; margin-left: 0%;" preload="metadata">
